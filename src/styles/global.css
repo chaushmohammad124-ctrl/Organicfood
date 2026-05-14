@@ -1,0 +1,803 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800;900&family=Poppins:wght@400;500;600;700;800;900&display=swap');
+:root {
+    --cream: #f7f1df;
+    --cream-dark: #eee3c6;
+    --green: #2d7a34;
+    --green-light: #49b957;
+    --green-dark: #153d20;
+    --text: #20341d;
+    --muted: #64735f;
+    --gold: #f2c94c;
+    --glass: rgba(255, 255, 255, 0.58);
+    --glass-strong: rgba(255, 255, 255, 0.78);
+    --border: rgba(255, 255, 255, 0.72);
+    --shadow: 0 24px 60px rgba(32, 62, 31, 0.14);
+    --deep-shadow: 0 38px 90px rgba(24, 63, 34, 0.28);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: radial-gradient(circle at top left, rgba(85, 190, 86, 0.27), transparent 30%), radial-gradient(circle at bottom right, rgba(255, 226, 134, 0.38), transparent 34%), linear-gradient(135deg, #fbf5df, #edf6d9);
+    color: var(--text);
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+}
+
+img,
+video {
+    max-width: 100%;
+}
+
+.page {
+    min-height: 80vh;
+    padding: 90px 8%;
+}
+
+.section {
+    padding: 85px 8%;
+}
+
+.smallTitle {
+    color: var(--green);
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 13px;
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.sectionHeader {
+    text-align: center;
+    max-width: 760px;
+    margin: 0 auto 46px;
+}
+
+.sectionHeader h2,
+.sectionHeader h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 58px);
+    line-height: 1.08;
+    margin: 12px 0;
+}
+
+.sectionHeader p {
+    color: var(--muted);
+    line-height: 1.85;
+}
+
+.noiseLayer {
+    position: fixed;
+    inset: 0;
+    opacity: 0.035;
+    z-index: -8;
+    pointer-events: none;
+    background-image: linear-gradient(90deg, #000 1px, transparent 1px), linear-gradient(#000 1px, transparent 1px);
+    background-size: 32px 32px;
+}
+
+.ambient-bg {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -10;
+    overflow: hidden;
+}
+
+.blob {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(75px);
+    opacity: 0.55;
+    animation: floatBlob 9s ease-in-out infinite;
+}
+
+.blob-one {
+    width: 340px;
+    height: 340px;
+    background: #7ed36f;
+    top: 6%;
+    left: -90px;
+}
+
+.blob-two {
+    width: 370px;
+    height: 370px;
+    background: #ffe08a;
+    right: -110px;
+    top: 20%;
+    animation-delay: 2s;
+}
+
+.blob-three {
+    width: 300px;
+    height: 300px;
+    background: #b9ef77;
+    bottom: -90px;
+    left: 35%;
+    animation-delay: 4s;
+}
+
+.blob-four {
+    width: 240px;
+    height: 240px;
+    background: #ffffff;
+    bottom: 20%;
+    right: 20%;
+    animation-delay: 6s;
+}
+
+@keyframes floatBlob {
+    0%,
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(35px, -35px) scale(1.14);
+    }
+}
+
+@media (max-width: 850px) {
+    .page,
+    .section {
+        padding: 65px 5%;
+    }
+}
+
+
+/* if not looking great then cut that parts below */
+
+
+/* ============================= */
+
+
+/* LUXURY DARK GREEN THEME */
+
+
+/* ============================= */
+
+:root {
+    --cream: #07140b;
+    --cream-dark: #0b1f10;
+    --green: #78d64b;
+    --green-light: #9dff6c;
+    --green-dark: #d9ffd0;
+    --text: #f5ffe9;
+    --muted: #b8c9b0;
+    --gold: #f4c95d;
+    --glass: rgba(255, 255, 255, 0.08);
+    --glass-strong: rgba(255, 255, 255, 0.13);
+    --border: rgba(255, 255, 255, 0.14);
+    --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+    --deep-shadow: 0 38px 90px rgba(0, 0, 0, 0.55);
+}
+
+body {
+    background: radial-gradient(circle at top left, rgba(120, 214, 75, 0.18), transparent 32%), radial-gradient(circle at bottom right, rgba(244, 201, 93, 0.12), transparent 35%), linear-gradient(135deg, #061109, #0b1f10 45%, #08160c);
+    color: var(--text);
+}
+
+.navbar {
+    background: rgba(7, 20, 11, 0.72) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.logo {
+    color: #ffffff;
+}
+
+.logoIcon {
+    background: linear-gradient(145deg, #f4c95d, #78d64b) !important;
+    color: #07140b !important;
+}
+
+.navLinks a {
+    color: #f5ffe9;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    color: var(--gold) !important;
+}
+
+.navLinks a::after {
+    background: var(--gold) !important;
+}
+
+.navPill,
+.circleBtn,
+.cartBtn,
+.menuBtn {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.navPill:hover,
+.circleBtn:hover,
+.cartBtn:hover,
+.menuBtn:hover {
+    background: rgba(244, 201, 93, 0.18) !important;
+    color: var(--gold) !important;
+}
+
+.cartBtn span {
+    background: var(--gold) !important;
+    color: #07140b !important;
+}
+
+.heroVideoOverlay {
+    background: radial-gradient(circle at 80% 35%, rgba(244, 201, 93, 0.18), transparent 35%), linear-gradient(90deg, rgba(3, 11, 5, 0.92), rgba(7, 20, 11, 0.68), rgba(3, 11, 5, 0.86)) !important;
+}
+
+.whiteTag {
+    color: var(--gold) !important;
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.primaryBtn,
+.addToCartBtn,
+.orderBtn,
+.confirmOrderBtn,
+.contactForm button,
+.newsletter button {
+    background: linear-gradient(135deg, #f4c95d, #78d64b) !important;
+    color: #07140b !important;
+    box-shadow: 0 18px 40px rgba(244, 201, 93, 0.22) !important;
+}
+
+.primaryBtn:hover,
+.addToCartBtn:hover,
+.orderBtn:hover,
+.confirmOrderBtn:hover {
+    box-shadow: 0 22px 55px rgba(244, 201, 93, 0.36) !important;
+}
+
+.secondaryBtn {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: #ffffff !important;
+    border: 1px solid rgba(255, 255, 255, 0.18) !important;
+}
+
+.categoryStrip div,
+.whyCard,
+.productCard,
+.processGrid div,
+.testimonialGrid>div,
+.statCard,
+.contactInfo,
+.contactForm,
+.aboutStats div,
+.values div,
+.checkoutSummary,
+.checkoutInput,
+.cartItem,
+.savedOrderCard,
+.emptyProducts {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.32) !important;
+    color: #f5ffe9 !important;
+}
+
+.productCard::before {
+    background: linear-gradient( 135deg, rgba(244, 201, 93, 0.22), transparent, rgba(120, 214, 75, 0.18)) !important;
+}
+
+.productCard:hover {
+    box-shadow: 0 35px 95px rgba(244, 201, 93, 0.18) !important;
+}
+
+.productTag,
+.stockBadge {
+    background: rgba(244, 201, 93, 0.16) !important;
+    color: var(--gold) !important;
+    border: 1px solid rgba(244, 201, 93, 0.24);
+}
+
+.category,
+.smallTitle,
+.productBottom h4,
+.statCard h2,
+.aboutStats h2,
+.savedOrderCard h4,
+.checkoutTotal strong,
+.grandTotal strong {
+    color: var(--gold) !important;
+}
+
+.desc,
+.sectionHeader p,
+.heroContent p,
+.categoryStrip p,
+.whyCard p,
+.processGrid p,
+.testimonialGrid p,
+.aboutText p,
+.contactHero p,
+.contactInfo span,
+.footer p,
+.footer a,
+.savedOrderCard p,
+.checkoutSummary div,
+.cartItemInfo p,
+.emptyCart p {
+    color: var(--muted) !important;
+}
+
+.productCard h3,
+.whyCard h3,
+.processGrid h3,
+.testimonialGrid h3,
+.sectionHeader h2,
+.sectionHeader h1,
+.productsHero h1,
+.contactHero h1,
+.aboutText h1,
+.detailText h1,
+.cartHeader h2,
+.emptyCart h3,
+.savedOrdersBox h3 {
+    color: #ffffff !important;
+}
+
+.productBottom h4 span {
+    color: var(--muted) !important;
+}
+
+.productImageBox img {
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12);
+}
+
+.searchBox,
+.filterWrapper {
+    background: rgba(255, 255, 255, 0.1) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+}
+
+.searchBox input {
+    color: #ffffff !important;
+}
+
+.searchBox input::placeholder,
+.contactForm input::placeholder,
+.contactForm textarea::placeholder,
+.checkoutInput input::placeholder,
+.checkoutInput textarea::placeholder {
+    color: #a9bda2 !important;
+}
+
+.filterWrapper button {
+    color: #ffffff !important;
+}
+
+.filterWrapper button.active,
+.filterWrapper button:hover {
+    background: var(--gold) !important;
+    color: #07140b !important;
+}
+
+.videoShowcase::after {
+    background: linear-gradient( 0deg, rgba(3, 11, 5, 0.9), rgba(3, 11, 5, 0.25)) !important;
+}
+
+.offerContent {
+    background: linear-gradient(135deg, rgba(3, 11, 5, 0.95), rgba(19, 57, 27, 0.86)), url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=90") !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.offerContent span,
+.promoBanner span {
+    color: var(--gold) !important;
+}
+
+.offerContent a,
+.videoShowcase a {
+    background: var(--gold) !important;
+    color: #07140b !important;
+}
+
+.cartDrawer {
+    background: linear-gradient(135deg, rgba(7, 20, 11, 0.96), rgba(11, 31, 16, 0.94)) !important;
+    border: 1px solid rgba(255, 255, 255, 0.13) !important;
+}
+
+.cartOverlay {
+    background: rgba(0, 0, 0, 0.66) !important;
+}
+
+.cartHeader {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.cartHeader button {
+    background: rgba(244, 201, 93, 0.16) !important;
+    color: var(--gold) !important;
+}
+
+.qtyControls {
+    background: rgba(244, 201, 93, 0.12) !important;
+}
+
+.qtyControls button {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: var(--gold) !important;
+}
+
+.cartItemRight button {
+    background: rgba(255, 80, 80, 0.15) !important;
+    color: #ff6b6b !important;
+}
+
+.clearBtn {
+    color: var(--muted) !important;
+}
+
+.checkoutInput input,
+.checkoutInput textarea,
+.contactForm input,
+.contactForm textarea {
+    color: #ffffff !important;
+    background: transparent !important;
+}
+
+.footer {
+    background: rgba(7, 20, 11, 0.78) !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.12) !important;
+}
+
+.footer h2,
+.footer h3 {
+    color: var(--gold) !important;
+}
+
+.socials span {
+    background: rgba(244, 201, 93, 0.16) !important;
+    color: var(--gold) !important;
+}
+
+.newsletter {
+    background: rgba(255, 255, 255, 0.12) !important;
+}
+
+.newsletter input {
+    color: white !important;
+}
+
+.blob-one {
+    background: #78d64b !important;
+}
+
+.blob-two {
+    background: #f4c95d !important;
+}
+
+.blob-three {
+    background: #174e25 !important;
+}
+
+.blob-four {
+    background: #ffffff !important;
+    opacity: 0.15 !important;
+}
+
+
+/* ============================= */
+
+
+/* BLACK / CHARCOAL + NEON GREEN THEME */
+
+
+/* ============================= */
+
+
+/* :root {
+    --cream: #050806;
+    --cream-dark: #0b0f0c;
+    --green: #39ff88;
+    --green-light: #7dffb3;
+    --green-dark: #d8ffe7;
+    --text: #ffffff;
+    --muted: #aab8ae;
+    --gold: #39ff88;
+    --glass: rgba(255, 255, 255, 0.07);
+    --glass-strong: rgba(255, 255, 255, 0.12);
+    --border: rgba(57, 255, 136, 0.18);
+    --shadow: 0 24px 70px rgba(0, 0, 0, 0.5);
+    --deep-shadow: 0 40px 100px rgba(0, 0, 0, 0.7);
+}
+
+body {
+    background: radial-gradient(circle at top left, rgba(57, 255, 136, 0.18), transparent 30%), radial-gradient(circle at bottom right, rgba(57, 255, 136, 0.1), transparent 35%), linear-gradient(135deg, #020403, #090d0a 45%, #111713);
+    color: var(--text);
+}
+
+.navbar {
+    background: rgba(5, 8, 6, 0.75) !important;
+    border-bottom: 1px solid rgba(57, 255, 136, 0.14) !important;
+}
+
+.logo,
+.navLinks a {
+    color: white !important;
+}
+
+.logoIcon {
+    background: linear-gradient(145deg, #39ff88, #0d8f49) !important;
+    color: #020403 !important;
+}
+
+.navLinks a:hover,
+.navLinks a.active {
+    color: var(--green) !important;
+}
+
+.navLinks a::after {
+    background: var(--green) !important;
+}
+
+.navPill,
+.circleBtn,
+.cartBtn,
+.menuBtn {
+    background: rgba(255, 255, 255, 0.09) !important;
+    color: white !important;
+    border: 1px solid rgba(57, 255, 136, 0.18) !important;
+}
+
+.navPill:hover,
+.circleBtn:hover,
+.cartBtn:hover,
+.menuBtn:hover {
+    background: rgba(57, 255, 136, 0.14) !important;
+    color: var(--green) !important;
+}
+
+.cartBtn span {
+    background: var(--green) !important;
+    color: #020403 !important;
+}
+
+.heroVideoOverlay {
+    background: radial-gradient(circle at 80% 35%, rgba(57, 255, 136, 0.16), transparent 35%), linear-gradient(90deg, rgba(0, 0, 0, 0.92), rgba(5, 8, 6, 0.68), rgba(0, 0, 0, 0.9)) !important;
+}
+
+.whiteTag,
+.smallTitle,
+.category,
+.productBottom h4,
+.statCard h2,
+.aboutStats h2,
+.savedOrderCard h4,
+.checkoutTotal strong,
+.grandTotal strong {
+    color: var(--green) !important;
+}
+
+.primaryBtn,
+.addToCartBtn,
+.orderBtn,
+.confirmOrderBtn,
+.contactForm button,
+.newsletter button {
+    background: linear-gradient(135deg, #39ff88, #0d8f49) !important;
+    color: #020403 !important;
+    box-shadow: 0 18px 45px rgba(57, 255, 136, 0.25) !important;
+}
+
+.primaryBtn:hover,
+.addToCartBtn:hover,
+.orderBtn:hover,
+.confirmOrderBtn:hover {
+    box-shadow: 0 25px 70px rgba(57, 255, 136, 0.42) !important;
+}
+
+.secondaryBtn {
+    background: rgba(255, 255, 255, 0.1) !important;
+    color: white !important;
+    border: 1px solid rgba(57, 255, 136, 0.22) !important;
+}
+
+.categoryStrip div,
+.whyCard,
+.productCard,
+.processGrid div,
+.testimonialGrid>div,
+.statCard,
+.contactInfo,
+.contactForm,
+.aboutStats div,
+.values div,
+.checkoutSummary,
+.checkoutInput,
+.cartItem,
+.savedOrderCard,
+.emptyProducts {
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(57, 255, 136, 0.16) !important;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45) !important;
+    color: white !important;
+}
+
+.productCard::before {
+    background: linear-gradient( 135deg, rgba(57, 255, 136, 0.2), transparent, rgba(255, 255, 255, 0.06)) !important;
+}
+
+.productCard:hover {
+    box-shadow: 0 35px 100px rgba(57, 255, 136, 0.22) !important;
+}
+
+.productTag,
+.stockBadge {
+    background: rgba(57, 255, 136, 0.12) !important;
+    color: var(--green) !important;
+    border: 1px solid rgba(57, 255, 136, 0.25) !important;
+}
+
+.desc,
+.sectionHeader p,
+.heroContent p,
+.categoryStrip p,
+.whyCard p,
+.processGrid p,
+.testimonialGrid p,
+.aboutText p,
+.contactHero p,
+.contactInfo span,
+.footer p,
+.footer a,
+.savedOrderCard p,
+.checkoutSummary div,
+.cartItemInfo p,
+.emptyCart p {
+    color: var(--muted) !important;
+}
+
+.productCard h3,
+.whyCard h3,
+.processGrid h3,
+.testimonialGrid h3,
+.sectionHeader h2,
+.sectionHeader h1,
+.productsHero h1,
+.contactHero h1,
+.aboutText h1,
+.detailText h1,
+.cartHeader h2,
+.emptyCart h3,
+.savedOrdersBox h3 {
+    color: white !important;
+}
+
+.searchBox,
+.filterWrapper {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border: 1px solid rgba(57, 255, 136, 0.18) !important;
+}
+
+.searchBox input,
+.checkoutInput input,
+.checkoutInput textarea,
+.contactForm input,
+.contactForm textarea,
+.newsletter input {
+    color: white !important;
+}
+
+.searchBox input::placeholder,
+.checkoutInput input::placeholder,
+.checkoutInput textarea::placeholder,
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    color: #7e8b82 !important;
+}
+
+.filterWrapper button {
+    color: white !important;
+}
+
+.filterWrapper button.active,
+.filterWrapper button:hover {
+    background: var(--green) !important;
+    color: #020403 !important;
+}
+
+.videoShowcase::after {
+    background: linear-gradient( 0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.22)) !important;
+}
+
+.offerContent {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.92), rgba(8, 20, 12, 0.84)), url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=90") !important;
+    background-size: cover !important;
+    background-position: center !important;
+}
+
+.offerContent a,
+.videoShowcase a {
+    background: var(--green) !important;
+    color: #020403 !important;
+}
+
+.cartDrawer {
+    background: linear-gradient(135deg, rgba(5, 8, 6, 0.97), rgba(11, 15, 12, 0.96)) !important;
+    border: 1px solid rgba(57, 255, 136, 0.18) !important;
+}
+
+.cartOverlay {
+    background: rgba(0, 0, 0, 0.72) !important;
+}
+
+.cartHeader {
+    border-bottom: 1px solid rgba(57, 255, 136, 0.14) !important;
+}
+
+.cartHeader button {
+    background: rgba(57, 255, 136, 0.12) !important;
+    color: var(--green) !important;
+}
+
+.qtyControls {
+    background: rgba(57, 255, 136, 0.1) !important;
+}
+
+.qtyControls button {
+    background: rgba(255, 255, 255, 0.12) !important;
+    color: var(--green) !important;
+}
+
+.footer {
+    background: rgba(5, 8, 6, 0.8) !important;
+    border-top: 1px solid rgba(57, 255, 136, 0.14) !important;
+}
+
+.footer h2,
+.footer h3 {
+    color: var(--green) !important;
+}
+
+.socials span {
+    background: rgba(57, 255, 136, 0.12) !important;
+    color: var(--green) !important;
+}
+
+.newsletter {
+    background: rgba(255, 255, 255, 0.09) !important;
+}
+
+.blob-one,
+.blob-two,
+.blob-three {
+    background: #39ff88 !important;
+}
+
+.blob-four {
+    background: white !important;
+    opacity: 0.1 !important;
+} */

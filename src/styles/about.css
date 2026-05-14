@@ -1,0 +1,632 @@
+.aboutHero {
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    align-items: center;
+    gap: 58px;
+}
+
+.aboutVideoCard {
+    position: relative;
+    padding: 16px;
+    border-radius: 48px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.aboutVideoCard video {
+    width: 100%;
+    height: 545px;
+    object-fit: cover;
+    border-radius: 37px;
+}
+
+.experienceBadge {
+    position: absolute;
+    right: -24px;
+    bottom: 42px;
+    width: 148px;
+    height: 148px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #4cca5b, #1f6428);
+    color: white;
+    box-shadow: 0 20px 45px rgba(45, 122, 52, 0.32);
+}
+
+.experienceBadge h2 {
+    font-size: 38px;
+}
+
+.experienceBadge p {
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.aboutText h1 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.06;
+}
+
+.aboutText p {
+    margin-top: 22px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.aboutStats {
+    margin-top: 32px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+}
+
+.aboutStats div {
+    padding: 24px;
+    border-radius: 30px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: 0 15px 35px rgba(45, 90, 39, 0.08);
+}
+
+.aboutStats svg {
+    color: var(--green);
+}
+
+.aboutStats h2 {
+    margin-top: 8px;
+    font-size: 34px;
+    color: var(--green);
+}
+
+.aboutStats p {
+    margin-top: 5px;
+    font-size: 13px;
+    font-weight: 800;
+}
+
+.values {
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.values div {
+    padding: 30px;
+    border-radius: 34px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+}
+
+.values svg {
+    width: 38px;
+    height: 38px;
+    color: var(--green);
+}
+
+.values h3 {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+.values p {
+    margin-top: 10px;
+    color: var(--muted);
+    line-height: 1.7;
+}
+
+@media (max-width: 1050px) {
+    .aboutHero,
+    .values {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 700px) {
+    .aboutHero,
+    .values,
+    .aboutStats {
+        grid-template-columns: 1fr;
+    }
+    .experienceBadge {
+        right: 20px;
+        bottom: 30px;
+    }
+    .aboutVideoCard video {
+        height: 410px;
+    }
+}
+
+.aboutStorySection {
+    margin-top: 95px;
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 28px;
+}
+
+.storyCard {
+    position: relative;
+    padding: 42px;
+    border-radius: 38px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.storyCard::after {
+    content: "";
+    position: absolute;
+    right: -70px;
+    bottom: -70px;
+    width: 180px;
+    height: 180px;
+    background: rgba(57, 255, 136, 0.14);
+    border-radius: 50%;
+    filter: blur(10px);
+}
+
+.storyCard h2 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 54px);
+    line-height: 1.08;
+    color: var(--text);
+}
+
+.storyCard h3 {
+    margin-top: 18px;
+    font-size: 28px;
+    color: var(--text);
+}
+
+.storyCard p {
+    position: relative;
+    z-index: 2;
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.ownerCard svg {
+    color: var(--green);
+    filter: drop-shadow(0 12px 30px rgba(57, 255, 136, 0.25));
+}
+
+.missionSection {
+    margin-top: 95px;
+    display: grid;
+    grid-template-columns: 0.95fr 1.05fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.missionImage {
+    padding: 15px;
+    border-radius: 42px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.missionImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
+.missionContent h2 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.08;
+    color: var(--text);
+}
+
+.missionContent p {
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.missionPoints {
+    margin-top: 28px;
+    display: grid;
+    gap: 14px;
+}
+
+.missionPoints div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border-radius: 22px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: 0 14px 34px rgba(0, 0, 0, 0.18);
+    font-weight: 900;
+    color: var(--text);
+}
+
+.missionPoints svg {
+    color: var(--green);
+    flex-shrink: 0;
+}
+
+.processSection {
+    margin-top: 100px;
+}
+
+.aboutProcessGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.aboutProcessCard {
+    position: relative;
+    min-height: 270px;
+    padding: 32px;
+    border-radius: 34px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+    transition: 0.35s ease;
+}
+
+.aboutProcessCard::before {
+    content: "";
+    position: absolute;
+    inset: auto -35px -35px auto;
+    width: 125px;
+    height: 125px;
+    border-radius: 50%;
+    background: rgba(57, 255, 136, 0.13);
+}
+
+.processNumber {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: rgba(57, 255, 136, 0.2);
+}
+
+.aboutProcessCard svg {
+    color: var(--green);
+    width: 40px;
+    height: 40px;
+}
+
+.aboutProcessCard h3 {
+    margin-top: 22px;
+    font-size: 23px;
+    color: var(--text);
+}
+
+.aboutProcessCard p {
+    margin-top: 12px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+.qualityPromise {
+    margin-top: 95px;
+}
+
+.qualityPromise>div {
+    position: relative;
+    text-align: center;
+    max-width: 950px;
+    margin: auto;
+    padding: 65px 45px;
+    border-radius: 46px;
+    background: linear-gradient(135deg, rgba(57, 255, 136, 0.12), rgba(255, 255, 255, 0.06)), var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--deep-shadow);
+    backdrop-filter: blur(22px);
+    overflow: hidden;
+}
+
+.qualityPromise>div::before {
+    content: "";
+    position: absolute;
+    left: -120px;
+    top: -120px;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    background: rgba(57, 255, 136, 0.16);
+    filter: blur(25px);
+}
+
+.promiseIcon {
+    width: 78px;
+    height: 78px;
+    margin: 0 auto 24px;
+    display: grid;
+    place-items: center;
+    border-radius: 24px;
+    background: linear-gradient(135deg, var(--green), #0d8f49);
+    color: #020403;
+    box-shadow: 0 20px 55px rgba(57, 255, 136, 0.28);
+}
+
+.promiseIcon svg {
+    width: 34px;
+    height: 34px;
+}
+
+.qualityPromise h2 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.08;
+    color: var(--text);
+}
+
+.qualityPromise p {
+    position: relative;
+    z-index: 2;
+    margin: 20px auto 0;
+    max-width: 760px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+@media (max-width: 1050px) {
+    .aboutStorySection,
+    .missionSection {
+        grid-template-columns: 1fr;
+    }
+    .aboutProcessGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .missionImage img {
+        height: 420px;
+    }
+}
+
+@media (max-width: 650px) {
+    .storyCard,
+    .qualityPromise>div {
+        padding: 32px 24px;
+        border-radius: 30px;
+    }
+    .aboutProcessGrid {
+        grid-template-columns: 1fr;
+    }
+    .missionImage img {
+        height: 330px;
+    }
+}
+
+.aboutVideoStory {
+    position: relative;
+    margin-top: 100px;
+    min-height: 620px;
+    border-radius: 48px;
+    overflow: hidden;
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: var(--deep-shadow);
+}
+
+.aboutVideoStory video {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    object-fit: cover;
+    transition: transform 1.2s ease, filter 1.2s ease;
+}
+
+.aboutVideoStory:hover video {
+    transform: scale(1.1);
+    filter: brightness(1.15) saturate(1.25);
+}
+
+.aboutVideoOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(circle at 80% 30%, rgba(57, 255, 136, 0.18), transparent 35%), linear-gradient(90deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.42));
+}
+
+.aboutVideoContent {
+    max-width: 720px;
+    color: white;
+}
+
+.aboutVideoContent h2 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 66px);
+    line-height: 1.05;
+}
+
+.aboutVideoContent p {
+    margin-top: 18px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.9;
+}
+
+.videoStoryCards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-top: 45px;
+}
+
+.videoStoryCard {
+    padding: 28px;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.11);
+    border: 1px solid rgba(57, 255, 136, 0.2);
+    backdrop-filter: blur(18px);
+    box-shadow: 0 22px 55px rgba(0, 0, 0, 0.28);
+    color: white;
+}
+
+.videoStoryCard svg {
+    color: var(--green);
+    width: 38px;
+    height: 38px;
+}
+
+.videoStoryCard h3 {
+    margin-top: 16px;
+    font-size: 22px;
+}
+
+.videoStoryCard p {
+    margin-top: 9px;
+    color: rgba(255, 255, 255, 0.72);
+    line-height: 1.65;
+}
+
+.dailyPromiseSection {
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.dailyPromiseText h2 {
+    margin-top: 14px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(36px, 5vw, 62px);
+    line-height: 1.08;
+    color: var(--text);
+}
+
+.dailyPromiseText p {
+    margin-top: 20px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.promiseMiniGrid {
+    margin-top: 28px;
+    display: grid;
+    gap: 14px;
+}
+
+.promiseMiniGrid div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 17px;
+    border-radius: 22px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    font-weight: 900;
+    color: var(--text);
+}
+
+.promiseMiniGrid svg {
+    color: var(--green);
+    flex-shrink: 0;
+}
+
+.dailyPromiseImage {
+    position: relative;
+    padding: 15px;
+    border-radius: 42px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.dailyPromiseImage img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 32px;
+}
+
+.floatingPromiseBadge {
+    position: absolute;
+    left: -20px;
+    bottom: 40px;
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 18px 20px;
+    border-radius: 24px;
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(57, 255, 136, 0.22);
+    backdrop-filter: blur(18px);
+    box-shadow: var(--shadow);
+    animation: floatBadge 3.5s ease-in-out infinite;
+}
+
+.floatingPromiseBadge svg {
+    color: var(--green);
+}
+
+.floatingPromiseBadge h3 {
+    color: var(--text);
+    font-size: 18px;
+}
+
+.floatingPromiseBadge p {
+    margin-top: 3px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+@keyframes floatBadge {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-14px);
+    }
+}
+
+@media (max-width: 950px) {
+    .videoStoryCards,
+    .dailyPromiseSection {
+        grid-template-columns: 1fr;
+    }
+    .aboutVideoStory {
+        padding: 40px 28px;
+        border-radius: 34px;
+    }
+    .dailyPromiseImage img {
+        height: 390px;
+    }
+}
+
+@media (max-width: 600px) {
+    .aboutVideoStory {
+        min-height: auto;
+    }
+    .dailyPromiseImage img {
+        height: 320px;
+    }
+    .floatingPromiseBadge {
+        left: 20px;
+        bottom: 25px;
+    }
+}

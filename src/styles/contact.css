@@ -1,0 +1,353 @@
+.contactPage {
+    padding-bottom: 100px;
+}
+
+.contactHero {
+    min-height: 360px;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    border-radius: 44px;
+    padding: 70px 30px;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.78), rgba(8, 25, 12, 0.72)), url("https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&w=1400&q=90");
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--deep-shadow);
+    overflow: hidden;
+}
+
+.contactHero h1 {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 76px);
+    line-height: 1.02;
+    color: white;
+}
+
+.contactHero p {
+    max-width: 760px;
+    margin: 20px auto 0;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.9;
+}
+
+.contactCards {
+    margin-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 22px;
+}
+
+.contactCard {
+    padding: 28px;
+    border-radius: 32px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+}
+
+.contactCard svg {
+    width: 38px;
+    height: 38px;
+    color: var(--green);
+}
+
+.contactCard h3 {
+    margin-top: 16px;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.contactCard h4 {
+    margin-top: 8px;
+    color: var(--green);
+    font-size: 16px;
+}
+
+.contactCard p {
+    margin-top: 6px;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.contactMainGrid {
+    margin-top: 70px;
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 35px;
+    align-items: stretch;
+}
+
+.contactInfoPanel,
+.contactForm {
+    padding: 38px;
+    border-radius: 40px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(22px);
+}
+
+.contactInfoPanel h2,
+.contactForm h2 {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    color: var(--text);
+    font-size: clamp(34px, 4vw, 52px);
+    line-height: 1.08;
+}
+
+.contactInfoPanel p {
+    margin-top: 18px;
+    color: var(--muted);
+    line-height: 1.9;
+}
+
+.supportList {
+    margin-top: 26px;
+    display: grid;
+    gap: 14px;
+}
+
+.supportList div {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    padding: 15px;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid var(--border);
+    color: var(--text);
+    font-weight: 800;
+}
+
+.supportList svg {
+    color: var(--green);
+}
+
+.deliveryPhoto {
+    position: relative;
+    margin-top: 28px;
+    overflow: hidden;
+    border-radius: 30px;
+    min-height: 260px;
+}
+
+.deliveryPhoto img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+    transition: 0.8s;
+}
+
+.deliveryPhoto:hover img {
+    transform: scale(1.1);
+    filter: brightness(1.08) saturate(1.15);
+}
+
+.deliveryPhoto div {
+    position: absolute;
+    left: 20px;
+    right: 20px;
+    bottom: 20px;
+    padding: 18px;
+    border-radius: 22px;
+    background: rgba(0, 0, 0, 0.42);
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    backdrop-filter: blur(16px);
+}
+
+.deliveryPhoto h3 {
+    color: white;
+    font-size: 22px;
+}
+
+.deliveryPhoto p {
+    margin-top: 4px;
+    color: rgba(255, 255, 255, 0.72);
+}
+
+.contactForm {
+    display: grid;
+    gap: 18px;
+}
+
+.inputRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 18px;
+}
+
+.contactForm input,
+.contactForm textarea,
+.contactForm select {
+    width: 100%;
+    padding: 17px 19px;
+    border-radius: 22px;
+    border: 1px solid rgba(57, 255, 136, 0.16);
+    outline: none;
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.contactForm select option {
+    color: #111;
+}
+
+.contactForm input::placeholder,
+.contactForm textarea::placeholder {
+    color: var(--muted);
+}
+
+.contactForm input:focus,
+.contactForm textarea:focus,
+.contactForm select:focus {
+    border-color: var(--green);
+    box-shadow: 0 0 0 4px rgba(57, 255, 136, 0.08);
+}
+
+.contactForm button {
+    margin-top: 6px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    padding: 17px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--green), #0d8f49);
+    color: #020403;
+    font-weight: 900;
+    font-size: 16px;
+    box-shadow: 0 18px 40px rgba(57, 255, 136, 0.25);
+    transition: 0.3s;
+}
+
+.contactForm button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 70px rgba(57, 255, 136, 0.4);
+}
+
+.contactBanner {
+    position: relative;
+    min-height: 480px;
+    margin-top: 85px;
+    padding: 55px;
+    display: grid;
+    align-items: end;
+    overflow: hidden;
+    border-radius: 46px;
+    color: white;
+    box-shadow: var(--deep-shadow);
+}
+
+.contactBanner video {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 1s;
+}
+
+.contactBanner:hover video {
+    transform: scale(1.1);
+    filter: brightness(1.12) saturate(1.2);
+}
+
+.contactBannerOverlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+    background: radial-gradient(circle at 80% 30%, rgba(57, 255, 136, 0.18), transparent 35%), linear-gradient(0deg, rgba(0, 0, 0, 0.86), rgba(0, 0, 0, 0.18));
+}
+
+.contactBanner div:last-child {
+    max-width: 760px;
+}
+
+.contactBanner h2 {
+    margin-top: 12px;
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(38px, 5vw, 64px);
+    line-height: 1.06;
+}
+
+.contactBanner p {
+    margin-top: 16px;
+    color: rgba(255, 255, 255, 0.78);
+    line-height: 1.85;
+}
+
+.faqSection {
+    margin-top: 85px;
+}
+
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.faqCard {
+    padding: 30px;
+    border-radius: 32px;
+    background: var(--glass);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+    backdrop-filter: blur(20px);
+}
+
+.faqCard svg {
+    color: var(--green);
+    width: 36px;
+    height: 36px;
+}
+
+.faqCard h3 {
+    margin-top: 16px;
+    color: var(--text);
+    font-size: 22px;
+}
+
+.faqCard p {
+    margin-top: 10px;
+    color: var(--muted);
+    line-height: 1.75;
+}
+
+@media (max-width: 1050px) {
+    .contactCards,
+    .faqGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .contactMainGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 650px) {
+    .contactHero {
+        padding: 50px 22px;
+        border-radius: 32px;
+    }
+    .contactCards,
+    .faqGrid,
+    .inputRow {
+        grid-template-columns: 1fr;
+    }
+    .contactInfoPanel,
+    .contactForm {
+        padding: 26px;
+        border-radius: 30px;
+    }
+    .contactBanner {
+        padding: 32px;
+        min-height: 390px;
+        border-radius: 32px;
+    }
+}

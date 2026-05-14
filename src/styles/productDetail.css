@@ -1,0 +1,162 @@
+.detailWrapper { padding-bottom: 95px; }
+
+.detailPage {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  align-items: center;
+  gap: 58px;
+}
+
+.detailImage {
+  position: relative;
+  padding: 17px;
+  border-radius: 48px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
+}
+
+.detailImage span {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  z-index: 2;
+  padding: 10px 15px;
+  border-radius: 50px;
+  background: white;
+  color: var(--green);
+  font-size: 13px;
+  font-weight: 900;
+  box-shadow: 0 14px 30px rgba(45, 90, 39, 0.13);
+}
+
+.detailImage img {
+  width: 100%;
+  height: 560px;
+  object-fit: cover;
+  border-radius: 38px;
+}
+
+.detailText .backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: var(--green);
+  font-weight: 900;
+}
+
+.detailText h1 {
+  margin-top: 12px;
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(42px, 5vw, 72px);
+  line-height: 1;
+}
+
+.detailRating {
+  margin-top: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #e2a800;
+  flex-wrap: wrap;
+}
+
+.detailRating span {
+  color: var(--muted);
+  font-weight: 700;
+  margin-left: 8px;
+}
+
+.detailText h2 {
+  margin-top: 20px;
+  color: var(--green);
+  font-size: 34px;
+}
+
+.detailText p {
+  margin-top: 20px;
+  color: var(--muted);
+  line-height: 1.9;
+  font-size: 17px;
+}
+
+.benefits {
+  margin-top: 25px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.benefits div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 13px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.62);
+  font-weight: 800;
+}
+
+.benefits svg { color: var(--green); }
+
+.deliveryBox,
+.qualityBox {
+  margin-top: 25px;
+  display: flex;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 25px;
+  background: rgba(45, 122, 52, 0.09);
+  border: 1px solid rgba(45, 122, 52, 0.12);
+}
+
+.deliveryBox svg,
+.qualityBox svg {
+  color: var(--green);
+  width: 34px;
+  height: 34px;
+}
+
+.deliveryBox p {
+  margin-top: 3px;
+  font-size: 14px;
+}
+
+.qualityBox {
+  margin-top: 12px;
+  align-items: center;
+  font-weight: 900;
+  color: var(--green-dark);
+}
+
+.addCartBtn {
+  margin-top: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 17px 33px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #4cca5b, #1f6428);
+  color: white;
+  font-weight: 900;
+  box-shadow: 0 18px 38px rgba(45, 122, 52, 0.28);
+  transition: 0.3s;
+}
+
+.addCartBtn:hover { transform: translateY(-5px); }
+
+.backBtn {
+  color: var(--green);
+  font-weight: 900;
+}
+
+@media (max-width: 950px) {
+  .detailPage { grid-template-columns: 1fr; }
+  .detailImage img { height: 420px; }
+}
+
+@media (max-width: 560px) {
+  .benefits { grid-template-columns: 1fr; }
+  .addCartBtn { width: 100%; justify-content: center; }
+}
